@@ -21,7 +21,7 @@ const mockProjects: Project[] = [
     id: '2',
     name: 'CliniSales',
     emoji: '🏥',
-    description: 'Agência de Assessoria Comercial para Clínicas',
+    description: 'Assessoria Comercial para Clínicas',
     status: 'active',
     progress: 62,
     deadline: '2026-03-22',
@@ -56,58 +56,60 @@ const mrrData = [
   { name: 'Mar', negocio_simples: 30, clinisales: 165 },
 ];
 
+const kpis = [
+  { value: '48', label: 'Tasks Total', color: 'text-brandos-primary' },
+  { value: '25', label: 'Concluídas', color: 'text-brandos-success' },
+  { value: '4', label: 'Agentes', color: 'text-brandos-info' },
+  { value: 'R$185k', label: 'MRR Total', color: 'text-brandos-warning' },
+];
+
 const recentActivity = [
   { title: '✅ Sprint 0 iniciado', subtitle: 'Foundation OS Module', date: 'Hoje' },
   { title: '🚀 BrandOS CC em desenvolvimento', subtitle: 'Componentes + páginas', date: 'Hoje' },
   { title: '📊 Dashboard estruturado', subtitle: 'OPERATIONS_DASHBOARD.md criado', date: 'Hoje' },
 ];
 
-const kpis = [
-  { value: '48', label: 'Tasks Total', color: 'text-brandos-primary' },
-  { value: '25', label: 'Completadas', color: 'text-brandos-success' },
-  { value: '4', label: 'Agentes', color: 'text-brandos-info' },
-  { value: 'R$185k', label: 'MRR Total', color: 'text-brandos-warning' },
-];
-
 export default function Home() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
+
+      {/* Header */}
       <div>
-        <h1 className="text-4xl font-bold text-brandos-primary mb-2 text-glow">
+        <h1 className="text-2xl md:text-4xl font-bold text-brandos-primary text-glow">
           🟢 BrandOS Command Center
         </h1>
-        <p className="text-brandos-text-secondary text-sm">
+        <p className="text-brandos-text-secondary text-xs md:text-sm mt-1">
           Última atualização: {new Date().toLocaleString('pt-BR')}
         </p>
       </div>
 
-      {/* Projects */}
+      {/* KPIs — 2 cols mobile, 4 cols desktop */}
       <section>
-        <h2 className="text-xl font-bold text-brandos-primary mb-4">📦 Projetos</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <h2 className="text-base md:text-xl font-bold text-brandos-primary mb-3">⚡ Status</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {kpis.map((kpi) => (
+            <div key={kpi.label} className="card text-center py-3 px-2">
+              <p className={`text-xl md:text-3xl font-bold ${kpi.color}`}>{kpi.value}</p>
+              <p className="text-xs text-brandos-text-secondary mt-1">{kpi.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects — 1 col mobile, 3 cols desktop */}
+      <section>
+        <h2 className="text-base md:text-xl font-bold text-brandos-primary mb-3">📦 Projetos</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {mockProjects.map((project) => (
             <OverviewCard key={project.id} project={project} />
           ))}
         </div>
       </section>
 
-      {/* KPIs */}
+      {/* Charts — 1 col mobile, 2 cols desktop */}
       <section>
-        <h2 className="text-xl font-bold text-brandos-primary mb-4">⚡ Status Rápido</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {kpis.map((kpi) => (
-            <div key={kpi.label} className="card text-center">
-              <p className={`text-3xl font-bold ${kpi.color}`}>{kpi.value}</p>
-              <p className="text-sm text-brandos-text-secondary mt-1">{kpi.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Charts */}
-      <section>
-        <h2 className="text-xl font-bold text-brandos-primary mb-4">📈 Métricas</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <h2 className="text-base md:text-xl font-bold text-brandos-primary mb-3">📈 Métricas</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="card">
             <MetricsChart
               data={tasksData}
@@ -133,24 +135,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Recent Activity */}
+      {/* Activity */}
       <section>
-        <h2 className="text-xl font-bold text-brandos-primary mb-4">📋 Atividade Recente</h2>
-        <div className="card space-y-3">
+        <h2 className="text-base md:text-xl font-bold text-brandos-primary mb-3">📋 Atividade Recente</h2>
+        <div className="card divide-y divide-brandos-border">
           {recentActivity.map((item, i) => (
-            <div
-              key={i}
-              className={`flex items-center justify-between pb-3 ${i < recentActivity.length - 1 ? 'border-b border-brandos-border' : ''}`}
-            >
-              <div>
-                <p className="font-semibold text-brandos-text">{item.title}</p>
-                <p className="text-sm text-brandos-text-secondary">{item.subtitle}</p>
+            <div key={i} className="flex items-center justify-between py-3">
+              <div className="flex-1 min-w-0 pr-4">
+                <p className="font-semibold text-brandos-text text-sm truncate">{item.title}</p>
+                <p className="text-xs text-brandos-text-secondary truncate">{item.subtitle}</p>
               </div>
-              <span className="text-xs text-brandos-text-secondary">{item.date}</span>
+              <span className="text-xs text-brandos-text-secondary whitespace-nowrap">{item.date}</span>
             </div>
           ))}
         </div>
       </section>
+
     </div>
   );
 }

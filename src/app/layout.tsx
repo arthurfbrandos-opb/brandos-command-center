@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
-import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -19,19 +18,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
-        <div className="flex h-screen bg-brandos-bg">
-          {/* Sidebar */}
+        <div className="flex h-screen bg-brandos-bg overflow-hidden">
           <Sidebar />
-          
-          {/* Main Content */}
-          <div className="flex-1 flex flex-col overflow-hidden">
-            <Header />
-            <main className="flex-1 overflow-auto bg-gradient-to-b from-brandos-bg to-brandos-surface">
-              <div className="p-6">
-                {children}
-              </div>
-            </main>
-          </div>
+          <main className="flex-1 overflow-y-auto bg-gradient-to-b from-brandos-bg to-brandos-surface md:pt-0 pt-[52px]">
+            <div className="p-4 md:p-6 max-w-7xl mx-auto">
+              {children}
+            </div>
+          </main>
         </div>
       </body>
     </html>
