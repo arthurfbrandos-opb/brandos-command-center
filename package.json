@@ -23,7 +23,7 @@
     "react-toastify": "^9.1.0",
     "react-hook-form": "^7.47.0",
     "date-fns": "^2.30.0",
-    "lucide-react": "^0.263.0"
+    "lucide-react": "^0.468.0"
   },
   "devDependencies": {
     "typescript": "^5.2.0",
