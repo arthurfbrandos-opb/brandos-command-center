@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brandos-primary: #00FF00;
+  --brandos-primary-dark: #00CC00;
+  --brandos-secondary: #0099FF;
+  --brandos-bg: #0A0E27;
+  --brandos-surface: #1A1F3A;
+  --brandos-border: #2A2F4A;
+  --brandos-text: #FFFFFF;
+  --brandos-text-secondary: #CCCCCC;
+  --brandos-success: #00FF00;
+  --brandos-warning: #FFD700;
+  --brandos-danger: #FF3333;
+  --brandos-info: #0099FF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-brandos-bg text-brandos-text font-sans;
+  background: linear-gradient(135deg, #0A0E27, #1A1F3A);
+  color: var(--brandos-text);
+}
+
+/* Scrollbar customizado */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-brandos-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brandos-border rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brandos-primary/50;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-brandos-primary text-brandos-bg font-bold py-2 px-4 rounded transition-all duration-200;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.btn-primary:hover {
+  @apply scale-105;
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
+}
+
+.btn-secondary {
+  @apply bg-brandos-surface text-brandos-primary border border-brandos-primary font-semibold py-2 px-4 rounded transition-all;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+}
+
+.btn-danger {
+  @apply bg-brandos-danger text-white font-bold py-2 px-4 rounded hover:scale-105 transition-all;
+}
+
+/* Cards */
+.card {
+  @apply bg-brandos-surface border border-brandos-border rounded-lg p-4 transition-all duration-200;
+}
+
+.card:hover {
+  border-color: var(--brandos-primary);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.card-glow {
+  @apply bg-brandos-surface rounded-lg p-4;
+  border: 2px solid var(--brandos-primary);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+}
+
+/* Progress Bar */
+.progress-bar {
+  @apply h-2 bg-brandos-border rounded-full overflow-hidden;
+}
+
+.progress-bar-fill {
+  @apply h-full rounded-full transition-all duration-300;
+  background: linear-gradient(90deg, var(--brandos-primary), var(--brandos-primary-dark));
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Status Badge */
+.badge {
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold;
+}
+
+.badge-success {
+  @apply bg-brandos-success/20 text-brandos-success;
+}
+
+.badge-warning {
+  @apply bg-brandos-warning/20 text-brandos-warning;
+}
+
+.badge-danger {
+  @apply bg-brandos-danger/20 text-brandos-danger;
+}
+
+.badge-info {
+  @apply bg-brandos-info/20 text-brandos-info;
+}
+
+/* Input Fields */
+input, textarea, select {
+  @apply bg-brandos-surface border border-brandos-border text-brandos-text rounded px-3 py-2 transition-all;
+}
+
+input:focus, textarea:focus, select:focus {
+  @apply outline-none border-brandos-primary;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+/* Links */
+a {
+  @apply text-brandos-primary hover:text-brandos-primary-dark transition-colors;
+}
+
+/* Animations */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Utility classes */
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.border-glow {
+  border-color: var(--brandos-primary);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
