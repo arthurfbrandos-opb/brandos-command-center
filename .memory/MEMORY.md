@@ -31,26 +31,44 @@
 - Zero Churn: SaaS de customer success (95% pronto), Supabase: hvpsxypzylqruuufbtxz
 
 ### 2. Negócio Simples (mentoria/SaaS/comunidade — PRINCIPAL)
-- Lançado fev/2026 para base própria (100 mentorados), sem lançamento público ainda
-- Posicionamento: "Software as a Mentoring" / "Software as an Agency"
-- Pricing: a partir de R$297/mês (anual ~R$2.997)
-- 3 sistemas: Foundation OS, Sales OS (método NSP), Delivery OS
-- SaaS próprio sendo construído (o "Jarvis" da agência do mentorado)
-- Comunidade no Discord
+- Lançado fev/2026 para base própria, sem lançamento público ainda
+- **Atualmente: 6 mentorados** (early adopters — Level Up não existe mais)
+- O que entregam hoje (manual):
+  - Base de conteúdo + plano de ação de 40 passos com aulas, prompts e materiais
+  - Hotseat/plantão de dúvidas semanal
+  - Aula de reforço sobre a metodologia a cada 15 dias
+- Posicionamento: "Torre de Controle" / "JARVIS para agências" / "Mission Control"
+- Pricing: Starter R$297 / Growth R$497 / Scale R$697 por mês
+- Modelo completo: SaaS + Franquia IA (R$50-150k, Q3-Q4/2026) + PowerHouse (2027)
+- 20 agentes de IA planejados distribuídos por plano (captação → conversão → retenção)
+- Custo operacional: ~R$124,50/agência/mês | Margem média: 75%
+- Stack: Next.js + Supabase + Redis | IA: Claude 10% + GPT-4o 70% + Gemini 20%
+- Roadmap: 12 semanas (Mar-Mai/2026) para Torre v1 — 4 épicos, 21 stories, 114-150h estimadas
+- Epic 1: Core Dashboard (sem. 1-2) | Epic 2: Foundation Specialist (sem. 3-4) | Epic 3: Quick Actions (sem. 5-6) | Epic 4: Automações (sem. 7-8)
+- Comunidade no Discord (Hotseats terças 19h + Cumbuca quintas 20h)
 - Repo GitHub: negocio_simples (chat com Claude API — embrião do SaaS)
+- Lead magnets planejados: Quiz diagnóstico, Canvas Foundation PDF, Checklist 100 pts, Webinar
+- Documento de produto v1.0 criado em 20/02/2026
 
 ### 3. PowerHouse (back-end estratégico — futuro)
 - Fornecedora de agentes/operadores de IA para CliniSales e mentorados do NS
 - Não é o foco agora — ativa depois que CliniSales e NS estiverem estruturados
 
-### 4. Performance Specialist (em construção)
-- Operador estrategista para o negócio do Arthur
-- Repo sendo subido no GitHub em breve
-- Detalhes a confirmar
+### 4. Performance Specialist (em construção — parte do NS)
+- Projeto interno para CliniSales que automatiza com IA:
+  - Otimização de funil de ads
+  - Otimização de funil de vendas
+  - Monitoramento de SDR de IA
+  - Gestão de indicadores
+  - Funis comerciais com agentes de IA de prospecção
+- Objetivo: reduzir tempo operacional de Arthur na CliniSales para focar no NS
+- É parte do projeto Negócio Simples (vai se tornar um dos sistemas entregues)
 
-### 5. Instituto Ery (novo — detalhes a confirmar)
-- Arthur tem responsabilidades nesse projeto
-- Precisa entender melhor o que é e qual é o papel dele
+### 5. Instituto Ery (renda extra — content)
+- Dois perfis no Instagram: @institutoery e @institutoery_familias
+- Arthur gera calendário de conteúdo a cada 15 dias (10 postagens) com estratégia
+- Objetivo: captar alunos para o curso do @institutoery_familias sobre "90 dias do bebê"
+- Conexão pessoal: Beatriz está grávida do Bernardo (maio/2026) — Arthur conhece o tema de perto
 
 ## BrandOS Command Center
 
@@ -72,6 +90,18 @@
 
 _[redacted — stored locally only]_
 
+
+## Browser / Instagram access
+
+- Chromium instalado no servidor: `/usr/bin/chromium-browser` (snap, v145) — OpenClaw detecta mas browser control service não inicia (sem DBUS/systemd)
+- Playwright headless shell funciona: `/root/.cache/ms-playwright/chromium_headless_shell-1208/`
+- Instagram requer login para acessar qualquer perfil
+- Credenciais: `arthur.opb` / `@Rthur1801`
+- 2FA ativo (TOTP) — códigos expiram em 30s, difícil usar via mensagem
+- Cookies salvos em `.ig_session.json` mas não persistem sessão sozinhos
+- Backup code 67081543 já foi consumido
+- **Pendente:** Arthur enviar chave secreta TOTP para gerar códigos automaticamente
+  - Instagram → Centro de Contas → Senha e Segurança → 2FA → App autenticador → Ver chave
 
 ## Pendências abertas
 
