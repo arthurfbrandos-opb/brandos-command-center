@@ -74,7 +74,6 @@ export default function TasksPage() {
   const [saving, setSaving] = useState(false);
   const [filterProject, setFilterProject] = useState('');
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
-  const [editForm, setEditForm] = useState<Partial<TaskFormState>>({});
 
   const loadAll = useCallback(async () => {
     setLoading(true);
@@ -199,7 +198,7 @@ export default function TasksPage() {
               {tasksByStatus(col.key).map(task => (
                 <div
                   key={task.id}
-                  onClick={() => { setSelectedTask(task); setEditForm({}); }}
+                  onClick={() => setSelectedTask(task)}
                   className="card cursor-pointer hover:border-brandos-primary/50 transition-colors p-3 space-y-2"
                 >
                   <p className="text-sm font-medium text-brandos-text leading-snug">{task.title}</p>
