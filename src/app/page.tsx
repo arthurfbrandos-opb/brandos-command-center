@@ -4,19 +4,7 @@ import { useEffect, useState, useCallback } from 'react';
 import OverviewCard from '@/components/OverviewCard';
 import MetricsChart from '@/components/MetricsChart';
 import { Loader2 } from 'lucide-react';
-
-type Project = {
-  id: string;
-  name: string;
-  emoji: string;
-  description?: string;
-  status: string;
-  progress: number;
-  deadline?: string;
-  created_by: string;
-  created_at: string;
-  updated_at: string;
-};
+import { Project } from '@/lib/types';
 
 type Task = {
   id: string;
