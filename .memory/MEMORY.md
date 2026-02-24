@@ -1,5 +1,5 @@
 # MEMORY.md — Jarbas do Negócio Simples™
-**Última atualização:** 22/02/2026
+**Última atualização:** 24/02/2026
 
 ---
 
@@ -103,8 +103,83 @@ _[redacted — stored locally only]_
 - **Pendente:** Arthur enviar chave secreta TOTP para gerar códigos automaticamente
   - Instagram → Centro de Contas → Senha e Segurança → 2FA → App autenticador → Ver chave
 
+## Posicionamento e Estratégia Definida (24/02/2026)
+
+### Declaração de Posicionamento (CORE)
+"Eu ajudo donos de agência de 20 a 50k/mês a terem previsibilidade de faturamento e margem acima de 30%, sem precisar escalar equipe. Faço isso através de processo comercial, operação enxuta e tecnologia."
+
+### Quem Arthur NÃO é
+- ❌ Guru de IA (IA é ferramenta, não tema central)
+- ❌ Coach motivacional (prático, mostra processo)
+- ❌ Consultor de marketing digital genérico (fala com donos de AGÊNCIA)
+- ❌ Mentor de agência grande (modelo é enxuto e lucrativo)
+
+### Posição no Instagram (@arthur.ferreira.ns)
+**Bio escolhida (Opção 1 — Resultado + Prova):**
+"Ajudo donos de agência a faturar mais com menos gente.
+1.8M faturados | 100+ agências mentoradas
+Processo > Equipe grande
+[link]"
+
+### Estratégia de Conteúdo (90 dias)
+**3 Pilares:**
+- **Pilar 1 (60%):** Bastidores reais — o que está fazendo agora na agência e no NS
+- **Pilar 2 (25%):** Framework e método — traduzido em dores do dono de agência
+- **Pilar 3 (15%):** Resultados e provas — cases reais, números concretos, prints
+
+**Calendário Semanal (7 posts fixos):**
+- **Segunda:** Bastidor da semana (testes, atualizações)
+- **Terça:** Framework/Ensino (pedaço da metodologia)
+- **Quarta:** História pessoal (jornada, vulnerabilidade real)
+- **Quinta:** Resultado/Case (número, print, depoimento)
+- **Sexta:** Opinião forte (posicionamento que gera debate)
+- **Sábado:** Lifestyle + propósito (Bernardo, liberdade, motivação)
+- **Domingo:** Interação (pergunta, enquete, caixinha)
+
+**Volume > Perfeição. Consistência > Qualidade.**
+
+### 3 Posts Fixados (Vitrine do Perfil)
+1. **Post da História:** "Quase quebrei minha agência depois de faturar 1.8 milhão. Aqui está o que aprendi."
+2. **Post do Framework:** "Sua agência fatura 30k e você não tira 10k? O problema não é faturamento. É estrutura."
+3. **Post do Resultado:** Case real com números (ex: "De 18k pra 52k/mês mudando UMA coisa")
+
+### Desafio Agência Lucrativa (3 dias - EM PLANEJAMENTO)
+**Objetivo:** Aquecimento + qualificação para oferta de R$6.000 (90 dias)
+
+**Estrutura:**
+- **Dia 1 (20h):** O Mito da Agência Grande — Diagnóstico ao vivo da margem
+- **Dia 2 (20h):** O Sistema de Receita Previsível — Sales OS simplificado
+- **Dia 3 (20h):** O Plano de 90 Dias + Oferta — Script de venda estruturado
+
+**6 Scripts de Captação:** Quente, Morno, Frio, Post/Stories, Indicação, Follow-up
+
+**Oferta Principal:** Programa Negócio Simples (R$6.000 ou 12x R$597)
+- Diagnóstico completo (Semana 1)
+- Implementação Sales OS (Semanas 2-6)
+- Setup IA prospeccão + qualificação
+- Padronização entrega (Semanas 6-10)
+- Acompanhamento semanal 90 dias
+- Acesso comunidade 6 meses
+
+**Garantia:** Se executar 100% e não tiver 8 reuniões/mês, continua grátis.
+
+**Alternativa:** Comunidade Negócio Simples (R$297/mês) — templates + grupo + suporte
+
+### Plano de Ação Imediato
+- [ ] Atualizar bio Instagram (Opção 1)
+- [ ] Arquivar posts antigos que não se encaixam
+- [ ] Gravar post fixado 1 (história — 2-3 min)
+- [ ] Criar carrossel post fixado 2 (framework — 7-10 slides)
+- [ ] Criar post fixado 3 (case/resultado — prints ou vídeo)
+- [ ] Montar 6 destaques no Instagram
+- [ ] Começar calendário semanal de 7 posts
+- [ ] Preparar landing page desafio (Carrd/Notion)
+- [ ] Configurar Zoom para os 3 dias
+- [ ] Ativar os 6 scripts de captação
+
 ## Pendências abertas
 
+- [ ] Executar Desafio (data a definir)
 - [ ] Entender Instituto Ery e Performance Specialist
 - [ ] Perguntar sobre rotina semanal do Arthur
 - [ ] Entender o maior gargalo atual
