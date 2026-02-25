@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/lib/supabase';
 import { Calendar, Loader } from 'lucide-react';
 
@@ -30,11 +30,7 @@ export const EditorialCalendar: FC<EditorialCalendarProps> = ({ projectId, limit
   const [posts, setPosts] = useState<EditorialPost[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchPosts();
-  }, [projectId]);
-
-  const fetchPosts = async () => {
+  const fetchPosts = useCallback(async () => {
     try {
       setLoading(true);
       const { data, error } = await supabase
@@ -52,7 +48,11 @@ export const EditorialCalendar: FC<EditorialCalendarProps> = ({ projectId, limit
     } finally {
       setLoading(false);
     }
-  };
+  }, [projectId, limit]);
+
+  useEffect(() => {
+    fetchPosts();
+  }, [fetchPosts]);
 
   if (loading) {
     return (

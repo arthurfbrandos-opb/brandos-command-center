@@ -1,8 +1,8 @@
 'use client';
 
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/lib/supabase';
-import { TrendingUp, Users, Zap, Loader } from 'lucide-react';
+import { Zap, Loader } from 'lucide-react';
 
 interface KPIData {
   id: string;
@@ -26,11 +26,7 @@ export const KPISnapshot: FC<KPISnapshotProps> = ({ projectId, category }) => {
   const [kpi, setKpi] = useState<KPIData | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchLatestKPI();
-  }, [projectId]);
-
-  const fetchLatestKPI = async () => {
+  const fetchLatestKPI = useCallback(async () => {
     try {
       setLoading(true);
       const { data, error } = await supabase
@@ -50,7 +46,11 @@ export const KPISnapshot: FC<KPISnapshotProps> = ({ projectId, category }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [projectId]);
+
+  useEffect(() => {
+    fetchLatestKPI();
+  }, [fetchLatestKPI]);
 
   if (loading) {
     return (

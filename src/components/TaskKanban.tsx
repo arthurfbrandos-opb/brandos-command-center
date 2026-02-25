@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/lib/supabase';
 import { Plus, Loader } from 'lucide-react';
 
@@ -32,11 +32,7 @@ export const TaskKanban: FC<TaskKanbanProps> = ({ projectId, sprintId }) => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchTasks();
-  }, [projectId, sprintId]);
-
-  const fetchTasks = async () => {
+  const fetchTasks = useCallback(async () => {
     try {
       setLoading(true);
       let query = supabase
@@ -56,7 +52,11 @@ export const TaskKanban: FC<TaskKanbanProps> = ({ projectId, sprintId }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [projectId, sprintId]);
+
+  useEffect(() => {
+    fetchTasks();
+  }, [fetchTasks]);
 
   const tasksByStatus = STATUSES.reduce((acc, status) => {
     acc[status] = tasks.filter((t) => t.status === status);

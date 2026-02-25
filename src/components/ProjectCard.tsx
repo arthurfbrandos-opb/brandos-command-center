@@ -18,6 +18,7 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: FC<ProjectCardProps> = ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   id,
   name,
   slug,
