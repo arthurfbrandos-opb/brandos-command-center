@@ -9,18 +9,9 @@
 }
 
 :root {
-  --brandos-primary: #00FF00;
-  --brandos-primary-dark: #00CC00;
-  --brandos-secondary: #0099FF;
-  --brandos-bg: #0A0E27;
-  --brandos-surface: #1A1F3A;
-  --brandos-border: #2A2F4A;
-  --brandos-text: #FFFFFF;
-  --brandos-text-secondary: #CCCCCC;
-  --brandos-success: #00FF00;
-  --brandos-warning: #FFD700;
-  --brandos-danger: #FF3333;
-  --brandos-info: #0099FF;
+  --brandos-neon: #00FF88;
+  --brandos-dark: #1A1A1A;
+  --brandos-metal: #4A4A50;
 }
 
 html {
@@ -28,9 +19,9 @@ html {
 }
 
 body {
-  @apply bg-brandos-bg text-brandos-text font-sans;
-  background: linear-gradient(135deg, #0A0E27, #1A1F3A);
-  color: var(--brandos-text);
+  @apply bg-brandos-dark-900 text-white font-sans;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #ffffff;
 }
 
 /* Scrollbar customizado */
@@ -40,66 +31,66 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-brandos-bg;
+  @apply bg-brandos-dark-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-brandos-border rounded;
+  @apply bg-brandos-metal-500 rounded;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-brandos-primary/50;
+  @apply bg-brandos-neon-400/50;
 }
 
 /* Buttons */
 .btn-primary {
-  @apply bg-brandos-primary text-brandos-bg font-bold py-2 px-4 rounded transition-all duration-200;
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  @apply bg-brandos-neon-400 text-brandos-dark-900 font-bold py-2 px-4 rounded transition-all duration-200;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
 }
 
 .btn-primary:hover {
   @apply scale-105;
-  box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
 }
 
 .btn-secondary {
-  @apply bg-brandos-surface text-brandos-primary border border-brandos-primary font-semibold py-2 px-4 rounded transition-all;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+  @apply bg-brandos-dark-700 text-brandos-neon-400 border border-brandos-neon-400 font-semibold py-2 px-4 rounded transition-all;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
 }
 
 .btn-secondary:hover {
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
 }
 
 .btn-danger {
-  @apply bg-brandos-danger text-white font-bold py-2 px-4 rounded hover:scale-105 transition-all;
+  @apply bg-red-600 text-white font-bold py-2 px-4 rounded hover:scale-105 transition-all;
 }
 
 /* Cards */
 .card {
-  @apply bg-brandos-surface border border-brandos-border rounded-lg p-4 transition-all duration-200;
+  @apply bg-brandos-dark-700 border border-brandos-neon-400/20 rounded-lg p-4 transition-all duration-200;
 }
 
 .card:hover {
-  border-color: var(--brandos-primary);
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  @apply border-brandos-neon-400/60;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
 }
 
 .card-glow {
-  @apply bg-brandos-surface rounded-lg p-4;
-  border: 2px solid var(--brandos-primary);
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+  @apply bg-brandos-dark-700 rounded-lg p-4;
+  border: 2px solid rgba(0, 255, 136, 1);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
 }
 
 /* Progress Bar */
 .progress-bar {
-  @apply h-2 bg-brandos-border rounded-full overflow-hidden;
+  @apply h-2 bg-brandos-metal-500 rounded-full overflow-hidden;
 }
 
 .progress-bar-fill {
   @apply h-full rounded-full transition-all duration-300;
-  background: linear-gradient(90deg, var(--brandos-primary), var(--brandos-primary-dark));
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  background: linear-gradient(90deg, #00ff88, #00ff77);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
 /* Status Badge */
@@ -108,43 +99,43 @@ body {
 }
 
 .badge-success {
-  @apply bg-brandos-success/20 text-brandos-success;
+  @apply bg-brandos-neon-400/20 text-brandos-neon-400;
 }
 
 .badge-warning {
-  @apply bg-brandos-warning/20 text-brandos-warning;
+  @apply bg-yellow-500/20 text-yellow-400;
 }
 
 .badge-danger {
-  @apply bg-brandos-danger/20 text-brandos-danger;
+  @apply bg-red-600/20 text-red-400;
 }
 
 .badge-info {
-  @apply bg-brandos-info/20 text-brandos-info;
+  @apply bg-brandos-teal-400/20 text-brandos-teal-300;
 }
 
 /* Input Fields */
 input, textarea, select {
-  @apply bg-brandos-surface border border-brandos-border text-brandos-text rounded px-3 py-2 transition-all;
+  @apply bg-brandos-dark-700 border border-brandos-neon-400/20 text-white rounded px-3 py-2 transition-all;
 }
 
 input:focus, textarea:focus, select:focus {
-  @apply outline-none border-brandos-primary;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+  @apply outline-none border-brandos-neon-400;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
 }
 
 /* Links */
 a {
-  @apply text-brandos-primary hover:text-brandos-primary-dark transition-colors;
+  @apply text-brandos-neon-400 hover:text-brandos-neon-300 transition-colors;
 }
 
 /* Animations */
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
   }
 }
 
@@ -182,10 +173,10 @@ a {
 
 /* Utility classes */
 .text-glow {
-  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
 .border-glow {
-  border-color: var(--brandos-primary);
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  border-color: #00ff88;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
 }
