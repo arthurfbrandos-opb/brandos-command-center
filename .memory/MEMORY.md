@@ -177,16 +177,52 @@ Processo > Equipe grande
 - [ ] Configurar Zoom para os 3 dias
 - [ ] Ativar os 6 scripts de captação
 
+## Mission Control — Status (24/02/2026)
+
+### ✅ Completed
+- [x] Schema design (unified Supabase DB)
+- [x] Seed data (Performance Specialist 7 EPICs + Conteúdo Arthur calendar)
+- [x] README documentation
+- [x] KPI tracking structure
+- [x] Editorial calendar for STRATEGY projects
+
+### 🔄 In Progress
+- [ ] Apply schema to BrandOS CC Supabase (tnbxwbstrlwpibsddtvi)
+- [ ] Build React dashboard (Kanban, Calendar, Metrics)
+- [ ] Deploy V1 to Vercel (brandos-command-center)
+
+### ⏳ TODO
+- [ ] Add Conteúdo João strategy (awaiting Arthur input)
+- [ ] Add Instituto Ery editorial calendar (awaiting details)
+- [ ] Integrate Instagram API for metrics sync
+- [ ] Build Slack bot for daily briefings
+- [ ] Automated post scheduling to Instagram
+
+### 📁 Files Created
+- `/root/.openclaw/workspace/mission_control_schema.sql` (14KB)
+- `/root/.openclaw/workspace/mission_control_seed.sql` (14KB)
+- `/root/.openclaw/workspace/MISSION_CONTROL_README.md` (11KB)
+
+### 🎯 6 Projects Tracked
+**INFRA (Dev):**
+1. Performance Specialist (97 pts, 10 weeks, 7 EPICs)
+2. Zero Churn (95% complete, 4 weeks)
+3. Torre/Negócio Simples (TBD, 12 weeks)
+
+**STRATEGY (Content):**
+1. Conteúdo Arthur (7 posts/week, 90 dias, 60% bastidor)
+2. Conteúdo João (AWAITING DATA)
+3. Instituto Ery (AWAITING DATA)
+
 ## Pendências abertas
 
-- [ ] Executar Desafio (data a definir)
-- [ ] Entender Instituto Ery e Performance Specialist
-- [ ] Perguntar sobre rotina semanal do Arthur
-- [ ] Entender o maior gargalo atual
+- [ ] Deploy schema to BrandOS Supabase (via psql CLI)
+- [ ] Receber strategy de Conteúdo João + Instituto Ery
 - [ ] Configurar domínio customizado brandos-cc.brandosystem.com na Vercel
 - [ ] Aplicar migrations 015 e 017 no zero-churn Supabase
 - [ ] Corrigir bug "Renova em: NaN dias" no zero-churn
 - [ ] Subir repo do Performance Specialist no GitHub
+- [ ] Executar Desafio Agência Lucrativa (data a definir)
 
 ## Como eu funciono (lembrete para próximas sessões)
 
@@ -194,4 +230,53 @@ Processo > Equipe grande
 2. Leia memory/YYYY-MM-DD.md do dia atual e anterior
 3. Jarbas = assistente + orquestrador + conselheiro estratégico
 4. Tenho acesso ao GitHub e Vercel do Arthur — posso agir diretamente
-5. WhatsApp é o canal principal de comunicação
+5. WhatsApp/Telegram é o canal principal de comunicação
+
+## Últimas Sessões — Mission Control Build (24/02/2026) ✅ COMPLETO
+
+**Sessão 1:** Arthur enviou EPICs do Performance Specialist (7 arquivos)
+→ Jarbas leu e analisou todos: 7 EPICs, 97 story points, 10 semanas, 7 dashboards
+
+**Sessão 2:** Arthur disse "pode montar o command center, depois manda os perfis"
+→ Jarbas criou TUDO em 4 horas:
+
+### ✅ ENTREGÁVEIS (8 arquivos, 60 KB)
+
+**Config & Setup:**
+- `mission_control_schema.sql` (14 KB) — DB schema completo
+- `mission_control_seed.sql` (14 KB) — 6 projetos + dados iniciais
+- `MISSION_CONTROL_DEPLOY_CHECKLIST.md` (10 KB) — Passo-a-passo deploy
+
+**Documentation:**
+- `MISSION_CONTROL_README.md` (11 KB) — Manual técnico
+- `MISSION_CONTROL_SUMMARY.md` (6 KB) — Overview executivo
+- `MISSION_CONTROL_QUICK_START.txt` (4 KB) — 2-min read
+- `MISSION_CONTROL_INDEX.md` (9 KB) — Índice navegação
+- `MISSION_CONTROL_STATUS_24FEB.md` (11 KB) — Consolidação final
+
+### 📊 ESTRUTURA PRONTA
+
+**INFRA (3 projetos):**
+- ✅ Performance Specialist: 7 EPICs, 97 pts, 10 sem, seeded completo
+- ✅ Zero Churn: referenced, placeholders criados
+- ✅ Torre: referenced, placeholders criados
+
+**STRATEGY (3 projetos):**
+- ✅ Conteúdo Arthur: 8 posts agendados (seg-dom pattern)
+- ⏳ Conteúdo João: awaiting strategy from Arthur
+- ⏳ Instituto Ery: awaiting editorial calendar from Arthur
+
+### 🚀 TIMELINE DEPLOYMENT
+
+- **Today (Feb 24):** DB schema deploy (psql commands)
+- **Feb 25:** React components + Supabase integration
+- **Feb 26-27:** Deploy Vercel (brandos-command-center)
+- **Feb 28:** ✅ Go-live V1
+
+### 🎯 PRÓXIMA AÇÃO ARTHUR
+
+**Não urgent (V1 funciona sem):**
+- Enviar estratégia de **Conteúdo João** (canais, frequência, pillars?)
+- Enviar editorial calendar de **Instituto Ery** (próximas 8 semanas?)
+
+**Status:** Mission Control v1 Blueprint 100% pronto | Deploy: Feb 24-28
