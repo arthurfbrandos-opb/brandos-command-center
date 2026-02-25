@@ -13,8 +13,8 @@ interface Project {
   name: string;
   slug: string;
   category: 'INFRA' | 'STRATEGY';
-  status: string;
-  priority: string;
+  status: 'PLANNING' | 'ACTIVE' | 'PAUSED' | 'COMPLETED';
+  priority: 'P0' | 'P1' | 'P2';
   description: string;
   objective: string;
   owner_name: string;
