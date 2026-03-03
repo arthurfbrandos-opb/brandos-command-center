@@ -1,5 +1,34 @@
 # MEMORY.md — Jarbas do Negócio Simples™
-**Última atualização:** 24/02/2026
+**Última atualização:** 03/03/2026
+
+---
+
+## ⚡ CHECKPOINT 03/03/2026 — MODEL VALIDATED
+
+**🎯 B1 EXECUTION — FIRST WEEK RESULTS:**
+- **2 closes** (100% conversion from 2 calls)
+  - 1x Mensal: R$297/mês (recorrente)
+  - 1x Anual: R$2.497 (upfront)
+- Both warm leads: ex-aluno + indicação
+- **Key insight:** "Galera tá cansada de curso, quer EXECUÇÃO"
+
+**🚀 MODEL SIMPLIFIED:**
+- Delivery: PDF map (40 steps, 6 stages) + IA agents + hotseat ao vivo + monthly reinforcement
+- No SaaS needed yet — delivering with maps + ready agents NOW
+- Overhead: 8.5h/month fixed (scales to 25-30 clients)
+- Individual call: annual clients only (R$2.5-4k justifies 1h)
+
+**📊 7 CHATGPT AGENTS READY:**
+Nicho / ICP / Entrega / Métodos / Oferta / Roteirista / Anúncio
+
+**🔴 GAP:** 3 missing agents for commercial activation (steps 24-35):
+- Prospection List Builder
+- SDR Automation
+- Copywriting Hunter
+→ Next week: document + test with 2 clients
+
+**📈 NEXT 30 DAYS:**
+Target 8-12 calls (2-3/week) → 4-6 closes (validates >50% rate)
 
 ---
 
